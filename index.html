@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="image/logo.png" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style/custom.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha384-TzJ+uHR6Z8vMF8EhKRbJG0dMUhzABzZ84nI4wP1uix5Q3dvgqbRq5qtJzttj8d3B"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-cwJDF+cHpXqTOf1tfUMaSYP0znsTPPTtmOXeCoy2AT9jKmcl9TYjzUn6DPLjftff"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/xlsx/dist/xlsx.full.min.js"></script>
+    <title>Inventaris Obat</title>
+</head>
+
+<body>
+    <div class="container mt-5">
+        <div class="text-center mb-5">
+            <h1 class="title-web"><strong>Inventaris Obat</strong></h1>
+        </div>
+        <div class="main row justify-content-center">
+            <form action="" id="form-obat" class="row justify-content-center mb-4" autocomplete="off">
+                <div class="col-10 col-md-8 mb-3">
+                    <label for="kodeObat" class="mb-1"><strong>Kode Obat</strong></label>
+                    <input type="text" class="form-control" id="kodeObat" placeholder="Masukkan kode obat">
+                </div>
+                <div class="col-10 col-md-8 mb-3">
+                    <label for="namaObat" class="mb-1"><strong>Nama Obat</strong></label>
+                    <input type="text" class="form-control" id="namaObat" placeholder="Masukkan nama obat">
+                </div>
+                <div class="col-10 col-md-8 mb-3">
+                    <label for="stokObat" class="mb-1"><strong>Stok Obat</strong></label>
+                    <input type="number" class="form-control" id="stokObat" placeholder="0" min="0">
+                </div>
+                <div class="col-10 col-md-8 mb-5">
+                    <label for="stokObat" class="mb-1"><strong>Jenis Obat</strong></label>
+                    <div>
+                        <select id="jenisObat" class="form-select col-md-8" aria-label="Disabled select example">
+                            <option selected disabled>Pilih jenis obat</option>
+                            <option value="Kapsul">Kapsul</option>
+                            <option value="Larutan">Larutan</option>
+                            <option value="Pil">Pil</option>
+                            <option value="Sirup">Sirup</option>
+                            <option value="Tablet">Tablet</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-10 col-md-8 d-flex justify-content-center gap-2">
+                    <button class="btn btn-primary add-btn flex-fill" id="enableButton">Baru 🔓</button>
+                    <button class="btn btn-success add-btn flex-fill" id="submitButton">Simpan 🔒</button>
+                    <button class="btn btn-success add-btn flex-fill" id="downloadButton" onclick="saveToExcel()">Simpan
+                        ke Excel 📄</button>
+                </div>
+            </form>
+            
+            <div class="col-10 mt-5">
+                <div class="d-flex justify-content-end mb-4">
+                    <span id="totalData" class="text-end">Total data: <strong>1</strong></span>
+                </div>
+                <div class="table-responsive">
+                    <table class="table table-striped table-dark">
+                        <thead>
+                            <th>Kode Obat</th>
+                            <th>Nama Obat</th>
+                            <th>Stok Obat</th>
+                            <th>Jenis Obat</th>
+                            <th>Action</th>
+                        </thead>
+                        <tbody id="list-obat">
+                            <tr>
+                                <td>1</td>
+                                <td>Paracetamol</td>
+                                <td>1</td>
+                                <td>Tablet</td>
+                                <td class="d-flex gap-2">
+                                    <button class="btn btn-warning btn-sm edit" id="editButton">Edit 📝</button>
+                                    <button class="btn btn-danger btn-sm delete" id="deleteButton">Hapus 🗞️</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+    <script src="js/excel.js"></script>
+</body>
+
+</html>

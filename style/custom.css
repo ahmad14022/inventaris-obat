@@ -1,0 +1,120 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff;
+    background-color: #1d2630;
+}
+
+.title-web {
+  background: linear-gradient(to right, #f700ff, #FFFF00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#kodeObat,
+#namaObat,
+#stokObat,
+#jenisObat {
+  border: none;
+  border-bottom: 1px solid #8a8a8a;
+  background-color: transparent;
+  border-radius: 0;
+  color: #ffffff;
+}
+
+.select,
+.option {
+  border: none;
+  background-color: transparent;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+  background-color: transparent;
+  color: #ffffff;
+}
+
+option {
+  color: #000;
+}
+
+#totalData {
+  color: #f7f7f7;
+}
+
+
+#kodeObat:focus,
+#namaObat:focus,
+#stokObat:focus,
+#jenisObat:focus {
+  box-shadow: none;
+  border-color: #42ffe6;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"]::-webkit-input-placeholder {
+  color: #888;
+  opacity: 1;
+}
+
+.btn:focus {
+  outline: none;
+  border: none;
+}
+
+.add-btn {
+  border-radius: 10px;
+  font-weight: bold;
+  padding: 12px 24px;
+}
+
+#enableButton {
+  background: linear-gradient(to right, #004c8b, #008ca5);
+  border: none;
+}
+
+#enableButton:hover {
+  box-shadow: 0 0 10px rgb(0, 238, 255);
+}
+
+#submitButton {
+  background: linear-gradient(to right, #016d2c, #00ac45);
+  border: none;
+}
+
+#submitButton:hover {
+  box-shadow: 0 0 10px rgb(0, 255, 0);
+}
+
+#downloadButton {
+  background: linear-gradient(to right, #54016d, #9800ac);
+  border: none;
+}
+
+#downloadButton:hover {
+  box-shadow: 0 0 10px rgb(247, 0, 255);
+}
+
+#editButton {
+  background: linear-gradient(to right, #f06000, #ebb400);
+  border: none;
+  color: #FFF;
+
+}
+
+#editButton:hover {
+  box-shadow: 0 0 10px rgb(255, 230, 0);
+}
+
+#deleteButton {
+  background: linear-gradient(to right, #ad0c00, #c95000);
+  border: none;
+}
+
+#deleteButton:hover {
+  box-shadow: 0 0 10px rgb(255, 0, 0);
+}
